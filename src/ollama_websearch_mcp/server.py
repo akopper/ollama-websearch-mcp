@@ -38,12 +38,12 @@ def get_ollama_client() -> Client:
 
 
 @mcp.tool()
-def web_search(query: str, max_results: int = 3) -> dict[str, Any]:
+def web_search(query: str, max_results: int = 5) -> dict[str, Any]:
     """Perform a web search using Ollama's hosted search API.
 
     Args:
         query: The search query to run.
-        max_results: Maximum number of results to return (default: 3).
+        max_results: Maximum number of results to return (default: 5).
 
     Returns:
         A dictionary containing search results with title, url, and snippet.

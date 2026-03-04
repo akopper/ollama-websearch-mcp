@@ -169,7 +169,7 @@ Perform a web search using Ollama's hosted search API.
 
 **Parameters:**
 - `query` (required): The search query string
-- `max_results` (optional): Maximum number of results to return (default: 3)
+- `max_results` (optional): Maximum number of results to return (default: 5)
 
 **Returns:** Dictionary containing search results with title, url, and snippet.
 
