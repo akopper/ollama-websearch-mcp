@@ -1,0 +1,57 @@
+[project]
+name = "ollama-websearch-mcp"
+description = "MCP server for Ollama web search and web fetch APIs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+version = "0.1.0"
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "ollama>=0.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-anyio",
+    "pytest-httpserver",
+    "ruff>=0.9.0",
+    "httpx",
+]
+
+[project.scripts]
+ollama-websearch-mcp = "ollama_websearch_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "I",
+    "N",
+    "ASYNC",
+    "B",
+    "C4",
+    "SIM",
+    "RUF",
+]
+ignore = ["FBT001"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
