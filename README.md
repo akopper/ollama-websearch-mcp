@@ -31,14 +31,28 @@ pip install -e .
 
 ### With uvx
 
+uvx runs the server in stdio mode by default (for Claude Desktop/Cursor):
+
 ```bash
 uvx --from https://github.com/akopper/ollama-websearch-mcp ollama-websearch-mcp
 ```
 
-### Docker
+For HTTP mode with uvx:
 
 ```bash
-docker run -e OLLAMA_API_KEY=your-api-key ghcr.io/akopper/ollama-websearch-mcp
+uvx --from https://github.com/akopper/ollama-websearch-mcp ollama-websearch-mcp -- --http
+```
+
+### Docker
+
+The Docker image defaults to HTTP mode.
+
+```bash
+# HTTP mode (default) - for remote usage
+docker run -d -p 8000:8000 -e OLLAMA_API_KEY=your-api-key ghcr.io/akopper/ollama-websearch-mcp
+
+# stdio mode - for Claude Desktop/Cursor
+docker run -it --rm -e OLLAMA_API_KEY=your-api-key ghcr.io/akopper/ollama-websearch-mcp --stdio
 ```
 
 ### Docker Compose
@@ -46,7 +60,7 @@ docker run -e OLLAMA_API_KEY=your-api-key ghcr.io/akopper/ollama-websearch-mcp
 ```bash
 cp .env.example .env
 # Edit .env with your API key
-docker-compose run ollama-websearch-mcp
+docker-compose up -d
 ```
 
 ## Configuration

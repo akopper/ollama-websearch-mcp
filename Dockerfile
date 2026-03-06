@@ -11,4 +11,4 @@ ENV PYTHONPATH=/app/src
 ENV OLLAMA_API_KEY=""
 ENV OLLAMA_HOST="https://ollama.com"
 
-CMD ["ollama-websearch-mcp"]
+CMD ["ollama-websearch-mcp", "--http"]
