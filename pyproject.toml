@@ -6,7 +6,7 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 version = "0.1.0"
 authors = [
-    { name = "Your Name", email = "you@example.com" }
+    { name = "Alexander Kopper", email = "alexander.kopper@designa.com" }
 ]
 dependencies = [
     "mcp>=1.0.0",
