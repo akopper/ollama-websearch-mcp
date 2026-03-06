@@ -7,6 +7,7 @@ RUN pip install --no-cache-dir .
 
 COPY src/ ./src/
 
+ENV PYTHONPATH=/app/src
 ENV OLLAMA_API_KEY=""
 ENV OLLAMA_HOST="https://ollama.com"
 
