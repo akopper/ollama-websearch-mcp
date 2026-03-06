@@ -89,12 +89,12 @@ python -m ollama_websearch_mcp.server --http
 
 Example:
 ```python
-def web_search(query: str, max_results: int = 3) -> dict[str, Any]:
+def web_search(query: str, max_results: int = 10) -> dict[str, Any]:
     """Perform a web search using Ollama's hosted search API.
 
     Args:
         query: The search query to run.
-        max_results: Maximum number of results to return (default: 3).
+        max_results: Maximum number of results to return (default: 10).
 
     Returns:
         A dictionary containing search results with title, url, and snippet.

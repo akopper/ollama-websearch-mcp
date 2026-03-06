@@ -155,16 +155,6 @@ Add to Cursor settings (or `.cursor/mcp.json` in project):
 }
 ```
 
-### Using with uvx
-
-```bash
-# stdio mode
-uvx ollama-websearch-mcp
-
-# HTTP mode
-uvx ollama-websearch-mcp --http
-```
-
 ### MCPorter Integration
 
 MCPorter can discover and use this MCP server. Create a config file:

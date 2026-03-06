@@ -1,6 +1,8 @@
 services:
   ollama-websearch-mcp:
     image: ghcr.io/akopper/ollama-websearch-mcp
+    ports:
+      - "8000:8000"
     environment:
       - OLLAMA_API_KEY=${OLLAMA_API_KEY}
       - OLLAMA_HOST=${OLLAMA_HOST:-https://ollama.com}
