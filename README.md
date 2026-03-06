@@ -16,18 +16,37 @@ This MCP server exposes two tools for interacting with Ollama's web services:
 
 ## Installation
 
+### Clone
+
+```bash
+git clone https://github.com/akopper/ollama-websearch-mcp.git
+cd ollama-websearch-mcp
+```
+
 ### From Source
 
 ```bash
-# Clone and install
-cd ollama-websearch-mcp
 pip install -e .
 ```
 
-### With uv
+### With uvx
 
 ```bash
-uv add ollama-websearch-mcp
+uvx --from https://github.com/akopper/ollama-websearch-mcp ollama-websearch-mcp
+```
+
+### Docker
+
+```bash
+docker run -e OLLAMA_API_KEY=your-api-key ghcr.io/akopper/ollama-websearch-mcp
+```
+
+### Docker Compose
+
+```bash
+cp .env.example .env
+# Edit .env with your API key
+docker-compose run ollama-websearch-mcp
 ```
 
 ## Configuration
