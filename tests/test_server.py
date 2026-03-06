@@ -60,7 +60,7 @@ class TestWebSearch:
 
         web_search(query="test")
 
-        mock_ollama_client.web_search.assert_called_once_with(query="test", max_results=5)
+        mock_ollama_client.web_search.assert_called_once_with(query="test", max_results=10)
 
 
 class TestWebFetch:

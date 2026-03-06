@@ -158,7 +158,7 @@ Or run ad-hoc:
 npx mcporter list ollama-websearch
 
 # Call a tool
-npx mcporter call ollama-websearch.web_search query:python max_results:5
+npx mcporter call ollama-websearch.web_search query:python max_results:10
 ```
 
 ## Available Tools
@@ -169,7 +169,7 @@ Perform a web search using Ollama's hosted search API.
 
 **Parameters:**
 - `query` (required): The search query string
-- `max_results` (optional): Maximum number of results to return (default: 5)
+- `max_results` (optional): Maximum number of results to return (default: 10)
 
 **Returns:** Dictionary containing search results with title, url, and snippet.
 
